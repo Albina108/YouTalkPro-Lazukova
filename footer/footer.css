@@ -1,0 +1,398 @@
+.footer {
+    grid-area: footer;
+    background-color: #2963a3;
+    display: grid;
+    grid-template-columns: minmax(16px, auto) minmax(288px, 1200px) minmax(16px, auto);
+    grid-template-areas: ". footer .";
+    padding-top: 40px;
+    padding-bottom: 16px;
+}
+
+.footer > div {
+    grid-area: footer;
+}
+
+.footer__content-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 316px 1fr;
+    gap: 11px;
+}
+
+.footer__navigation {
+    display: grid;
+    grid-template-columns: 204px 204px 193px;
+}
+
+.footer__socials {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    -webkit-box-align: start;
+    align-items: start;
+    padding-left: 92px;
+}
+.footer__navigation__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    max-height: 184px;
+}
+.footer__navigation__item > a {
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+h4 {
+    color: #fff;
+    margin-bottom: 8px;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.footer__form {
+    margin-bottom: 8px;
+    position: relative;
+}
+.footer__form-field {
+    display: block;
+    position: relative;
+}
+
+.footer__input {
+    padding-right: 80px;
+    height: 48px;
+    background-color: #fff;
+    border: 1px solid #9d9d9d;
+    border-radius: 4px;
+    color: #333;
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    outline: none;
+    padding: 14px 16px;
+    -webkit-transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    width: 100%;
+}
+.footer__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 48px;
+    color: rgb(255, 255, 255);
+    outline: none;
+    border-radius: 4px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background: rgb(53, 179, 169);
+    border: 2px solid rgb(53, 179, 169);
+    box-sizing: border-box;
+    height: 48px;
+    overflow: hidden;
+    min-width: 50px;
+}
+.footer__button:hover {
+    background: rgb(3, 160, 148);
+    border: 2px solid rgb(3, 160, 148);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.footer__text {
+    color: hsla(0, 0%, 100%, 0.7);
+    font-family: Montserrat, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+    line-height: 18px;
+}
+
+.footer__socials {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    -webkit-box-align: start;
+    align-items: start;
+    padding-left: 92px;
+}
+.footer__socials__menu {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.footer__socials-menu-item {
+    display: block;
+    height: 32px;
+    margin: 0 16px 16px 0;
+    width: 32px;
+}
+
+.soc-list__item:last-child {
+    margin-right: 0;
+}
+.footer__socials-menu-item > a {
+    cursor: pointer;
+    color: #2963a3;
+    text-decoration: none;
+    background-color: transparent;
+}
+.footer__socials-menu-item > img {
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.footer__underlines {
+    display: flex;
+    padding: 16px 0px;
+}
+.footer__underlines__item {
+    width: 156px;
+    margin-right: 48px;
+}
+
+.footer__underlines__text > span {
+    display: block;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+    opacity: 0.7;
+}
+
+.footer__underlines__text > a {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    transition: color 0.2s;
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+/* Медиазапросы */
+
+/* Mobile devices/small screen */
+@media screen and (max-width: 480px) {
+    .footer__content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer__navigation {
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer__navigation__item:nth-child(3) {
+        display: none;
+    }
+
+    .footer__socials {
+        padding-left: 0;
+    }
+
+    .footer__socials-menu-item {
+        margin-right: 8px;
+    }
+
+    .footer__underlines {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer__underlines__item {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+    .footer__socials {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 0; /* Уберите отступы, если они есть */
+    }
+
+    .footer__socials-menu {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0; /* Сброс отступов списка */
+        margin: 0; /* Сброс полей списка */
+    }
+
+    .footer__socials-menu-item {
+        flex: 1; /* Заставляет каждый элемент занимать равное пространство */
+        text-align: center; /* Центрирует иконки */
+    }
+
+    .footer__socials-menu-item > a {
+        display: inline-block;
+        width: 100%;
+    }
+
+    .footer__socials-menu-item > img {
+        width: 24px; /* Настройте размер иконок, если нужно */
+        height: 24px;
+    }
+
+    .footer__underlines {
+        display: flex;
+        flex-direction: row; /* Располагаем элементы в ряд */
+        justify-content: space-between; /* Равномерное распределение */
+        padding: 0; /* Убираем отступы, если они есть */
+    }
+
+    .footer__underlines__item {
+        flex: 1; /* Делаем каждый элемент равной ширины */
+        text-align: left; /* Центрируем текст внутри элементов */
+        margin-right: 0; /* Убираем отступ между элементами */
+    }
+
+    .footer__underlines__text {
+        font-size: 12px; /* Настроить размер шрифта, если нужно */
+    }
+}
+
+/* Smartphones */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .footer__content-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        column-gap: 0px;
+    }
+
+    .footer__navigation {
+        display: flex;
+        flex-direction: row;
+        -moz-box-pack: justify;
+        justify-content: space-between;
+        column-gap: unset;
+    }
+
+    .footer__socials {
+        padding-left: 0;
+    }
+
+    .footer__socials-menu-item {
+        margin-right: 12px;
+    }
+    .footer__socials-menu {
+        display: flex;
+        justify-content: space-between; /* Равномерное распределение по ширине */
+        align-items: center; /* Выравнивание элементов по центру по вертикали */
+        gap: 10px; /* Регулирует расстояние между элементами */
+        padding: 0; /* Убирает возможные отступы */
+        margin: 0; /* Убирает возможные внешние отступы */
+    }
+
+    .footer__underlines {
+        display: flex;
+        justify-content: space-between; /* Равномерное распределение элементов по ширине */
+        align-items: center; /* Выравнивание по центру по вертикали */
+        gap: 20px; /* Регулирует расстояние между элементами */
+        padding: 0; /* Убирает отступы, если они есть */
+    }
+
+    .footer__underlines__item {
+        margin: 0; /* Убирает внешние отступы у каждого элемента */
+        text-align: left; /* Центрирует текст внутри каждого элемента */
+    }
+}
+
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer__content-grid {
+        grid-template-columns: auto 292px;
+        grid-template-rows: 264px auto;
+        column-gap: 88px;
+        padding: 0 24px 0 24px;
+    }
+    .footer__navigation {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .one {
+        display: none;
+    }
+
+    .footer__underlines {
+        grid-column: 1 / 2;
+        grid-row: 4;
+        margin-top: 20px;
+        width: fit-content;
+    }
+
+    .footer__socials {
+        padding-left: 20px;
+    }
+    .footer__socials-menu {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .footer__underlines__item {
+        width: 50%;
+    }
+}
+
+/* Laptops and small screens */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    .footer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer__content {
+        max-width: 1024px;
+        width: 100%;
+        padding: 0 10px;
+    }
+    .footer__content-grid {
+        grid-template-columns: auto 316px 1fr;
+        gap: 20px;
+    }
+
+    .footer__navigation {
+        grid-template-columns: 204px 204px 193px;
+    }
+
+    .footer__socials {
+        padding-left: 0px;
+    }
+}
+
+/* Big screens */
+@media screen and (min-width: 1281px) {
+    .footer__content-grid {
+        grid-template-columns: auto 316px 1fr;
+    }
+
+    .footer__navigation {
+        grid-template-columns: 204px 204px 193px;
+    }
+
+    .footer__socials {
+        padding-left: 100px;
+    }
+}

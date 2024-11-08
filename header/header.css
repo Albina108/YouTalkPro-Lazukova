@@ -1,0 +1,107 @@
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    height: 56px;
+    align-items: center;
+}
+.header__logo {
+    width: 48px;
+}
+.header__menu {
+    display: none;
+    margin-left: 32px;
+}
+.header__menu > ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.header__menu__item {
+    list-style: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+.header__menu__item > a {
+    text-decoration: none;
+}
+.header__menu__item > a:active {
+    color: inherit;
+}
+.header__menu__item:not(:first-of-type) {
+    margin-left: 16px;
+}
+.header__button {
+    display: none;
+}
+
+.button_primary {
+    background-color: #e3f5f5;
+    color: #03b2a5;
+}
+.button_secondary {
+    background-color: #35b3a9;
+    color: #fff;
+}
+button {
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border-radius: 4px;
+    padding: 14px 20px;
+    font-size: 16px;
+    border: none;
+    font-weight: bold;
+    min-width: 200px;
+}
+
+.header__burger {
+    display: block;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.header-line {
+    grid-area: header_line;
+    border: none;
+    background-color: #EFF2F2;
+    height: 2px;
+    width: 100%;
+  }
+  
+  
+
+/* iPhone 11 */
+@media screen and (min-width: 414px) {
+    .header {
+        height: 72px;
+    }
+}
+
+/* iPad min */
+@media screen and (min-width: 768px) {
+    .header {
+        height: 76px;
+    }
+    .header__logo {
+        width: 51px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .header__menu {
+        display: flex;
+        flex: 1;
+    }
+    .header__button {
+        display: block;
+    }
+    .header__burger {
+        display: none;
+      }
+}
+@media screen and (min-width: 1200px) {
+    .header__menu__item:not(:first-of-type) {
+        margin-left: 30px;
+    }
+}
